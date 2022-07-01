@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 const File = require("./modals/File.js");
 const express = require("express");
 const req = require("express/lib/request");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const app = express();
 const upload = multer({ dest: "uploads" });
 app.use(express.urlencoded({ extended:true }));
